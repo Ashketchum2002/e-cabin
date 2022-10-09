@@ -157,7 +157,7 @@ router.get("/:id", async (req,res)=>{
         res.status(200).json(weekDayStats);
     }catch(e){
         console.log(e);
-        res.status(500).json("Error while fetching an Employee.")
+        res.status(500).json(e)
     }
 });
 

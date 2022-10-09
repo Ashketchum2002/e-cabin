@@ -11,7 +11,6 @@ const cors = require("cors");
 
 
 app.use(express.json({ extended: false }));
-app.use(express.static("public"));
 app.use(helmet());
 app.use(morgan("common"));
 
