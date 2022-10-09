@@ -22,7 +22,7 @@ export default function AdminDashBoard() {
     const [loading, setLoading] = useState(0)
 
     const fetchEmployees = async () => {
-        var result = await axios.get("http://localhost:8000/employees/");
+        var result = await axios.get("/api/employees/");
         result = result.data;
         // console.log(result);
         

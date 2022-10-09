@@ -36,7 +36,7 @@ export default function AddTaskPopup(props) {
             alert("You cannot add tasks for future dates")
             return 
         }
-        const result = await axios.post("http://localhost:8000/tasks/", {employeeId: props.employee._id, taskDesc: taskDescription.current.value, taskType: taskType.current.value, startTime: startTime.current.value, timeTaken: timeForCompletion.current.value})
+        const result = await axios.post("/api/tasks/", {employeeId: props.employee._id, taskDesc: taskDescription.current.value, taskType: taskType.current.value, startTime: startTime.current.value, timeTaken: timeForCompletion.current.value})
         if (result) {
             alert("Close to reload")
             window.location.reload()

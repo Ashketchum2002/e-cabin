@@ -33,7 +33,7 @@ export default function Login() {
             //     dispatch
             //   );
             try {
-                const res = await axios.post("http://localhost:8000/api/auth/login", {email: email, password: e.target[0].value})
+                const res = await axios.post("/api/auth/login", {email: email, password: e.target[0].value})
                 if ((typeof(res.data) != "object") && res.data.includes("Create an account")) {
                     alert(res.data);
                     navigate("/")

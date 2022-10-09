@@ -26,7 +26,7 @@ export default function AdminEmployee(props) {
     const [data2, setData2] = useState(null);
 
     const fetchData = async () => {
-        var result = await axios.get("http://localhost:8000/employees/" + props.employee._id)
+        var result = await axios.get("/api/employees/" + props.employee._id)
         result = result.data
       
         setEmpData(result)

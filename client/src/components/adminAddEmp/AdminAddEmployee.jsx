@@ -26,7 +26,7 @@ export default function AdminAddEmployee(props) {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const result = await axios.post("http://localhost:8000/employees/addEmployee", {name: name.current.value, email: email.current.value, phoneNumber: mobile.current.value, department: department.current.value, joiningDate: joiningDate.current.value, isAdmin: isAdmin.current.value})
+        const result = await axios.post("/api/employees/addEmployee", {name: name.current.value, email: email.current.value, phoneNumber: mobile.current.value, department: department.current.value, joiningDate: joiningDate.current.value, isAdmin: isAdmin.current.value})
         // console.log(result);
         alert("Close to reload")
         window.location.reload()

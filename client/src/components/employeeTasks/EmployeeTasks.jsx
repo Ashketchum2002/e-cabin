@@ -23,7 +23,7 @@ export default function EmployeeTasks() {
     const fetchTasks = async () => {
         const temp = JSON.parse(localStorage.getItem("user"))
         // const tasks = await axios.post("http://localhost:8000/tasks/timeline", {userId: temp._id})
-        const tasks = await axios.post("http://localhost:8000/tasks/todayTasks", {userId: temp._id})
+        const tasks = await axios.post("/api/tasks/todayTasks", {userId: temp._id})
 
         await tasks.data[0].sort((a, b) => {
             return a.startTime > b.startTime
