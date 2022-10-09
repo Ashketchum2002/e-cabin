@@ -39,7 +39,7 @@ export default function AddTaskPopup(props) {
         const result = await axios.post("/api/tasks/", {employeeId: props.employee._id, taskDesc: taskDescription.current.value, taskType: taskType.current.value, startTime: startTime.current.value, timeTaken: timeForCompletion.current.value})
         if (result) {
             alert("Close to reload")
-            window.location.reload()
+            document.location.reload()
         }
     }
 
