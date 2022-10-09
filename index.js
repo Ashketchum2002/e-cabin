@@ -21,7 +21,7 @@ const authRoute = require("./routes/auth");
 const taskRoute = require("./routes/tasks");
 const empRoute = require("./routes/adminActions");
 
-let port = process.env.PORT || 8000;
+let port = process.env.PORT || 5000;
 
 if (process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'staging') {
   app.use(express.static('client/build'));
@@ -37,9 +37,9 @@ mongoose.connect(urlDB, {useNewUrlParser : true},()=>{
 
 app.use("/api/auth",authRoute);
 
-app.use("/tasks",taskRoute);
+app.use("/api/tasks",taskRoute);
 
-app.use("/employees",empRoute);
+app.use("/api/employees",empRoute);
 
 
 
