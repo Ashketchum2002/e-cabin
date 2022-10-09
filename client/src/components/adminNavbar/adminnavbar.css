@@ -1,0 +1,208 @@
+.navContainer {
+    display: flex;
+    background: white;
+    z-index: 1;
+    color: white;
+    width: 100%;
+    height: 70px;
+    z-index: 100;
+    align-items: center;
+    justify-content:space-evenly;
+}
+
+.navLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    color: black
+}
+
+.navLink:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px red;
+}
+
+.navLink p {
+    margin-left: 7px;
+    color: black;
+}
+
+.hamburger {
+    display: none;
+}
+
+.logoContainer {
+    display: flex;
+}
+
+.logoContainer:hover {
+    border-bottom: 5px solid white;
+}
+
+.logoContainer span {
+    position: relative;
+    top: 3px;
+    font-size: 15px;
+}
+
+.logo {
+    width: 100px;
+    object-fit: contain;
+    margin-top: 18px;
+}
+/* 
+.locationIcon {
+
+} */
+
+.helloSelectYourAddress {
+    display: flex;
+    position: relative;
+    top: 8px;
+}
+
+.headerOptionLineOne {
+    display: block;
+    font-size: 10px;
+    font-weight: 400;
+    position: relative;
+    bottom: 6px;
+}
+
+.headerOptionLineTwo {
+    display: block;
+    position: relative;
+    bottom: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.searchContainer {
+    display: flex;
+    width: 45%;
+}
+
+.dropDownButton {
+    width: 60px;
+    height: 40px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: none;
+    display: flex;
+    justify-content:space-around;
+    align-items:center;
+    font-size: 12px;
+    color: rgb(95, 92, 92);
+    background-color: rgb(228, 220, 220);
+    cursor: pointer;
+}
+
+
+.searchInput {
+    height: 40px;
+    width: 100%;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    padding: 10px;
+    border-radius: 0;
+}
+
+.searchInput:focus {
+    outline: none;
+    border: 3px solid #FEBD69;
+}
+
+.searchButton {
+    height: 40px;
+    width: 50px;
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: #FEBD69;
+    cursor: pointer;
+}
+
+.searchIcon {
+    position: relative;
+    top: 3px;
+}
+
+.headerOption {
+    position: relative;
+    top: 9px;
+}
+
+.cartNumber {
+    position: relative;
+    bottom: 23px;
+    right: 18px;
+    color: #FEBD69;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.accountDropDownArrowIcon {
+    position: relative;
+    bottom: 12px;
+}
+
+.headerOption2 {
+    display: flex;
+}
+
+.cartContainer {
+    position: relative;
+    top: 5px;
+}
+
+.cartContainer:hover {
+    border-bottom: 5px solid white;
+}
+
+.cartContainer .headerOptionLineTwo {
+    position: relative;
+    right: 14px;
+    top: 5px;
+}
+
+.returnsAndOrdersLogoContainer {
+    cursor: pointer;
+}
+ 
+.returnsAndOrdersLogoContainer:hover {
+    border-bottom: 5px solid white;
+}
+
+.yourAccountLinkContainer:hover {
+    cursor: pointer;
+    border-bottom: 5px solid white;
+}
+
+.helloSelectYourAddress:hover {
+    cursor: pointer;
+    border-bottom: 5px solid white;
+}
+
+@media only screen and (min-width:200px) and (max-width: 1200px) {
+    .drop {
+        display: none;
+    }
+    
+    .hamburger {
+        display: inline-block;
+        margin-left: 50%;
+    }
+
+    .hamburger:hover {
+        cursor: pointer;
+    }
+    
+}
+
+.blockDisplay {
+    display: block;
+    justify-content: center;
+    align-items: center;
+}

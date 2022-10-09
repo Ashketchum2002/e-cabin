@@ -1,0 +1,31 @@
+
+
+.popupOuter {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+}
+
+.popupInner {
+    background-color: white;
+    width: 50vh;
+    min-height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropPopup {
+    display: none;
+}
+
+.closePopupButton {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}

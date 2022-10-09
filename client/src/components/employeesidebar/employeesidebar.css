@@ -1,0 +1,53 @@
+
+/* rgb(0, 102, 255) */
+
+.employeeSidebarWrapper {
+    background: linear-gradient(to bottom, navy, #29ab87);
+    min-height: 100vh;
+    max-width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 10px;
+    gap: 10px;
+    overflow-y: scroll;
+    overflow: scroll;
+    overflow-x: scroll;
+    background-color: #f2b118;
+}
+
+.employeeImage {
+    border-radius: 50%;
+    width: 90%;
+    margin-bottom: 10px;
+}
+
+.employeeCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.employeeInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: large;
+}
+
+.employeeInfo div p {
+    margin-top: 5px;
+    font-family: 'Roboto';
+}
+
+@media only screen and (min-width:200px) and (max-width: 800px) {
+    .employeeSidebarWrapper {
+        width: 98%;
+        max-width: 100%;
+        min-height: 50vh;
+    }
+}

@@ -1,0 +1,224 @@
+
+.div-create {
+    float: right;
+}
+
+.div-event {
+    padding-top: 30px;
+}
+
+.cards {
+    padding-bottom: 20px;
+}
+  
+.tasksWrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.calendarAndButtonContainer {
+    width: 100%;
+    padding: 10px;
+    margin: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px black;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    min-width: 100%;
+    padding-bottom: 0;
+}
+
+.addTaskButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto
+}
+
+.addTaskButton button {
+    display: flex;
+    gap: 5px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 102, 255);
+    height: 40px;
+    width: 150px;
+    border:none;
+    border-radius: 10px;
+    font-size: medium;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    margin-left: 50px;
+}
+
+.addTaskButton button:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px black;
+}
+
+.addTaskButton button:active {
+    transform: translateY(3px);
+}
+
+.calendarContainer {
+    box-shadow: 0 0 10px rgb(0, 119, 255);
+    height: fit-content;
+    width: fit-content;
+}
+
+.mainContainer {
+    width: 73%;
+    display: flex;
+    flex-direction: column;
+}
+
+.clockContainer {
+    width: 200px;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    min-height: 40vh;
+    margin: 20px;
+    padding: 10px;
+    margin-left: auto;
+    color: rgb(123, 0, 255);
+    font-weight: 500;
+}
+
+.todayTasks {
+    background-color: white;
+    box-shadow: 0 0 10px black;
+    width: 50%;
+    margin: 0 18px;
+    padding: 5px;
+    /* background: linear-gradient(to left, #8758FF, #E94560); */
+    background: linear-gradient(to left, #F7A76C, #EC7272);
+}
+
+.todayTasks h1 {
+    margin: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: white
+}
+
+.yesterdayTasks {
+    background-color: white;
+    box-shadow: 0 0 10px black;
+    width: 50%;
+    margin: 0 18px;
+    padding: 5px;
+    /* background: linear-gradient(to left, #8758FF, #E94560); */
+    background: linear-gradient(to left, #FA7070, #937DC2);
+}
+
+.yesterdayTasks h1 {
+    margin: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: black
+}
+
+.tasksContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color: white;
+    margin-left: 20px;
+    box-shadow: 0 0 10px black;
+    padding: 20px;
+}
+
+.aTask {
+    padding: 10px;
+}
+
+.aTask li {
+    display: flex;
+    align-items: center;
+}
+
+.aTask li p {
+    margin-left: 10px;
+}
+
+.aTask li p:first-child {
+    font-weight: bolder;
+    color: black;
+    font-size: 1.25rem;
+}
+
+.aTask li p:last-child {
+    font-weight: 500;
+    color: white;
+    font-size: 1.25rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
+@media only screen and (min-width:200px) and (max-width: 800px) {
+
+    .tasksWrapper {
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .calendarAndButtonContainer {
+        width: 75%;
+        padding: 5px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .mainContainer {
+        margin: 0;
+        width: 100%;
+    }
+
+    .addTaskButton button {
+        margin-top: 10px;
+    }
+
+    .clockContainer {
+        width: fit-content;
+        height: fit-content;
+        max-height: 10vh;
+        min-height: 10vh;
+    }
+
+    .tasksContainer {
+        flex-wrap: wrap;
+        width: 90%;
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+
+    .todayTasks {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .yesterdayTasks {
+        width: 100%;
+    }
+    
+}

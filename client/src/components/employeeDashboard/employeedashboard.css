@@ -1,0 +1,10 @@
+.dashboardMain {
+    display: flex;
+    width: 100%;
+}
+
+@media only screen and (min-width:200px) and (max-width: 800px) {
+    .dashboardMain {
+        flex-wrap: wrap;
+    }
+}
