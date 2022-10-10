@@ -43,7 +43,7 @@ export default function AdminDashBoard() {
         if (loading == 1) {
             setTimeout(() => {
                 setLoading(!loading);
-            }, 1700)
+            }, 2000)
         }
     }, [change])
 
@@ -59,7 +59,7 @@ export default function AdminDashBoard() {
         setLoading(!loading)
         setTimeout(() => {
             setLoading(!loading);
-        }, 1500)
+        }, 2000)
     }
 
     const handlePopup = () => {

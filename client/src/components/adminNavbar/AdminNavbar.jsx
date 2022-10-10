@@ -24,7 +24,8 @@ export default function AdminNavbar(props) {
     const handleLogout = () => {
         localStorage.removeItem("user")
         localStorage.removeItem("employee")
-        navigate("/")
+        // navigate("/")
+        document.location.reload();
     }
 
     const navContainer = useRef()
