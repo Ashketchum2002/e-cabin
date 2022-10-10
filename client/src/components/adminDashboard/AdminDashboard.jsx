@@ -13,7 +13,7 @@ export default function AdminDashBoard() {
 
     const [employee, setEmployee] = useState(null);
 
-    const [allEmployees, setAllEmployees] = useState([]);
+    const [allEmployees, setAllEmployees] = useState(null);
 
     const [change, setChange] = useState(0);
 
@@ -70,7 +70,7 @@ export default function AdminDashBoard() {
                 {loading == 1 ? <LoadingPopup loading={loading} /> : ""}
                 <AdminNavbar handlePopup={handlePopup} />
                 <div className="dashboardMain">
-                    <AdminSidebar employees={allEmployees} handleSelect={handleSelect} />
+                    {allEmployees ? <AdminSidebar employees={allEmployees} handleSelect={handleSelect} /> : ""}
                     {employee ? <AdminEmployee employee={employee} /> : ""}
                 </div> 
             </div> : ""}
