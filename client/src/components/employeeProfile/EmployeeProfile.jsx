@@ -41,7 +41,7 @@ export default function EmployeeProfile(props) {
 
     return (
         <>
-            <div className="profileEditWrapper">
+            {user ? <div className="profileEditWrapper">
                 {user ? (user.isAdmin ? <AdminNavbar /> : <EmployeeNavbar />) : ""}
                 <div className="profileEdit">
                     <form onSubmit={handleSubmit}>
@@ -80,7 +80,7 @@ export default function EmployeeProfile(props) {
                         <button className="submitButton" type="submit">Save Changes</button>
                     </form>
                 </div>
-            </div>
+            </div> : ""}
         </>
     )
 }
