@@ -24,7 +24,8 @@ export default function EmployeeNavbar() {
     const handleLogout = () => {
         localStorage.removeItem("user")
         localStorage.removeItem("employee")
-        navigate("/")
+        // navigate("/")
+        document.location.reload();
     }
 
     const navContainer = useRef()
@@ -62,10 +63,12 @@ export default function EmployeeNavbar() {
                     </div>
                 </Link>
 
-                <div className={active == 0 ? "navLink drop" : "navLink"}>
-                    <PersonIcon />
-                    <p>Account Profile</p>
-                </div>
+                <Link to="/profile" style={{textDecoration: "none"}}>
+                    <div className={active == 0 ? "navLink drop" : "navLink"}>
+                        <PersonIcon />
+                        <p>Account Profile</p>
+                    </div>
+                </Link>
                 
                 <Link to="/tasks" style={{textDecoration: "none"}}>
                     <div className={active == 0 ? "navLink drop" : "navLink"}>

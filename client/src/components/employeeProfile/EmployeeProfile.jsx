@@ -1,5 +1,6 @@
 import "./EmployeeProfile.css"
 import AdminNavbar from "../adminNavbar/AdminNavbar"
+import EmployeeNavbar from "../employeeNavbar/EmployeeNavbar";
 import EditIcon from '@mui/icons-material/Edit';
 import EmailIcon from '@mui/icons-material/Email';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
@@ -8,7 +9,7 @@ import LockIcon from '@mui/icons-material/Lock';
 import LockPersonIcon from '@mui/icons-material/LockPerson';
 import LockClockIcon from '@mui/icons-material/LockClock';
 import { useRef } from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function EmployeeProfile(props) {
 
@@ -18,15 +19,23 @@ export default function EmployeeProfile(props) {
     const department = useRef()
     const joiningDate = useRef()
 
+    const [user, setUser] = useState(null)
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         console.log(name.current.value + " " + email.current.value + " " + mobile.current.value + " " + department.current.value + " " + joiningDate.current.value);
     }
 
+    useEffect(() => {
+        const temp = JSON.parse(localStorage.getItem("user"))
+        
+        setUser(temp)
+    })
+
     return (
         <>
             <div className="profileEditWrapper">
-                <AdminNavbar />
+                {user ? (user.isAdmin ? <AdminNavbar /> : <EmployeeNavbar />) : ""}
                 <div className="profileEdit">
                     <form onSubmit={handleSubmit}>
 

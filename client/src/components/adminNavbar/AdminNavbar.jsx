@@ -61,10 +61,12 @@ export default function AdminNavbar(props) {
                     </div>
                 </Link>
 
-                <div className={active == 0 ? "navLink drop" : "navLink"}>
-                    <PersonIcon />
-                    <p>Account Profile</p>
-                </div>
+                <Link to="/profile" style={{textDecoration: "none"}}>
+                    <div className={active == 0 ? "navLink drop" : "navLink"}>
+                        <PersonIcon />
+                        <p>Account Profile</p>
+                    </div>
+                </Link>
                 
                 {/* <Link to="/addEmployee" style={{textDecoration: "none"}}>
                     <div className="navLink">
