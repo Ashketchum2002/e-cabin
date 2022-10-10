@@ -29,7 +29,7 @@ There are four links in the navbar. Added a small animation to the nav links
 
 All the employees' names who are working in the organization are shown here. There is a search bar that can be used to filter the employee list based
 on their names.
-#### How to use the searchbar? 
+## How to use the searchbar? 
 Enter a string in the search bar and then click on the search icon. The employees' list will be filtered. If the admin want the entire list back, then he 
 has to clear the search bar and click on the search icon
 
