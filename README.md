@@ -2,6 +2,8 @@
 
 Problem Statement -> Build a web application where employers can keep a check on their employees' work done every particular day.
 
+## Made by -> Chevva Ashish Reddy, Gajji Prem Kumar, Bedre Dhanush
+
 ## The webite is responive. Responsive images at the end of readme. You can also check it out on a mobile.
 
 # Test Admin cerdentials
