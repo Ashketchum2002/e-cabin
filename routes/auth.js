@@ -73,5 +73,30 @@ router.post("/login", function(req, res){
 });
 
 
+router.post("/editProfile", async (req, res) => {
 
+    try {
+        const user = await Employee.findById(req.body._id);
+        
+        if (!user) {
+            res.send("User not found")
+            return 
+        }
 
+        else if (user.isDisabled) {
+            res.send("Your account has been suspended")
+            return
+        }
+
+        user.name = req.body.name
+        user.phoneNumber = req.body.phoneNumber
+
+        await user.save();
+        
+        res.send("Saved")
+
+    } catch(err) {
+        console.log(err);
+    }
+
+});

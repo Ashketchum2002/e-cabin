@@ -10,6 +10,7 @@ import LockPersonIcon from '@mui/icons-material/LockPerson';
 import LockClockIcon from '@mui/icons-material/LockClock';
 import { useRef } from "react";
 import { useState, useEffect } from "react";
+import axios from "axios"
 
 export default function EmployeeProfile(props) {
 
@@ -23,7 +24,13 @@ export default function EmployeeProfile(props) {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(name.current.value + " " + email.current.value + " " + mobile.current.value + " " + department.current.value + " " + joiningDate.current.value);
+        const result = await axios.post("/api/auth/editProfile", {_id: user._id, name: name.current.value, phoneNumber: mobile.current.value})
+
+        if (result) {
+            alert(result.data)
+        }
+
+        document.location.reload();
     }
 
     useEffect(() => {
@@ -48,26 +55,26 @@ export default function EmployeeProfile(props) {
                         </div>
                         <div className="formElement readOnly">
                             <div><LockPersonIcon style={{fontSize:"30px"}}/></div>
-                            <input ref={name} id="name" type="text" value={props.name} readOnly/>
+                            <input ref={name} id="name" type="text" value={user.name} readOnly/>
                         </div>
                         <div className="formElement ">
                             <div><EmailIcon style={{fontSize:"30px"}} /></div>
-                            <input  ref={email} id="email" type="text" placeholder={props.email}></input>
+                            <input  ref={email} id="email" type="text" placeholder={user.email}></input>
                         </div>
 
                         <div className="formElement">
                             <div><LocalPhoneIcon style={{fontSize:"30px"}} /></div>
-                            <input ref={mobile} id="mobile" type="text" placeholder={props.mobile}></input>
+                            <input ref={mobile} id="mobile" type="text" placeholder={user.phoneNumber}></input>
                         </div>
 
                         <div className="formElement readOnly">
                             <div><LockIcon style={{fontSize:"30px"}} /></div>
-                            <input ref={department} id="department" type="text" value={props.department} readOnly/>
+                            <input ref={department} id="department" type="text" value={user.department} readOnly/>
                         </div>
 
                         <div className="formElement readOnly">
                             <div><LockClockIcon style={{fontSize:"30px"}} /></div>
-                            <input ref={joiningDate} id="joiningDate" type="text" value={props.joiningDate} readOnly/>
+                            <input ref={joiningDate} id="joiningDate" type="text" value={user.joiningDate} readOnly/>
                         </div>
 
                         <button className="submitButton" type="submit">Save Changes</button>
