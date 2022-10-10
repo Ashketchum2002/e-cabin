@@ -163,7 +163,7 @@ router.post("/weeklyStats", async (req,res)=>{
 
 
 // Get all users
-router.get("/", async (req,res)=>{
+router.post("/", async (req,res)=>{
     try{
         const EmployeesMeta = await Employee.find();
         // console.log(EmployeesMeta);

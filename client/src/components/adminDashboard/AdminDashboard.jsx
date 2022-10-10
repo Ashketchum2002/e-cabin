@@ -22,7 +22,7 @@ export default function AdminDashBoard() {
     const [loading, setLoading] = useState(0)
 
     const fetchEmployees = async () => {
-        var result = await axios.get("/api/employees/");
+        var result = await axios.post("/api/employees/");
         
         setAllEmployees(result.data)
 
