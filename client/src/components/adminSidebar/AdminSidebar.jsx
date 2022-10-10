@@ -22,6 +22,7 @@ export default function AdminSidebar(props) {
     }
 
     useEffect(() => {
+        console.log(props.employees);
         setAllEmployees(props.employees)
         fetchEmployees();
     }, [])

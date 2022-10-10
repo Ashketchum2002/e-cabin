@@ -27,6 +27,7 @@ export default function AdminDashBoard() {
         setAllEmployees(result.data)
 
         alert("Fetched")
+        console.log(result.data);
         
         var cur = JSON.parse(localStorage.getItem("employee"))
         if (cur) {
