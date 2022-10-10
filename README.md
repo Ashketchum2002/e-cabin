@@ -13,6 +13,7 @@ email - ashishoct2002.ketchum@gmail.com
 password - 89197
 
 # As the website is live, you will have to add tasks to see the charts, as we have added tasks only for dates 10th October or less.
+The default password is first five digits of the mobile number. 
 
 ## Login
 
