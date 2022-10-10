@@ -18,8 +18,6 @@ ChartJS.register(CategoryScale, LinearScale, BarElement, Title, ArcElement, Tool
 
 export default function AdminEmployee(props) {
 
-  console.log(props);
-
     const [stackedBarData, setStackedBarData] = useState(null);
     const [empData, setEmpData] = useState(null)
     const [data1, setData1] = useState(null);
@@ -28,7 +26,8 @@ export default function AdminEmployee(props) {
     const fetchData = async () => {
         var result = await axios.get("/api/employees/" + props.employee._id)
         result = result.data
-        console.log(result);
+        console.log("Result",result);
+        console.log("hi")
       
         setEmpData(result)
 
