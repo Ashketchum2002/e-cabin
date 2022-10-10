@@ -6,7 +6,7 @@ import EmailIcon from '@mui/icons-material/Email';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import WorkIcon from '@mui/icons-material/Work';
 import LockIcon from '@mui/icons-material/Lock';
-import LockPersonIcon from '@mui/icons-material/LockPerson';
+import PersonIcon from '@mui/icons-material/Person';
 import LockClockIcon from '@mui/icons-material/LockClock';
 import { useRef } from "react";
 import { useState, useEffect } from "react";
@@ -24,11 +24,10 @@ export default function EmployeeProfile(props) {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        alert("hi")
         const result = await axios.post("/api/auth/editProfile", {_id: user._id, name: name.current.value, phoneNumber: mobile.current.value})
 
-        if (result) {
-            alert(result.data)
-        }
+        alert(result.data)
 
         document.location.reload();
     }
@@ -54,11 +53,11 @@ export default function EmployeeProfile(props) {
                             <br/>
                         </div>
                         <div className="formElement readOnly">
-                            <div><LockPersonIcon style={{fontSize:"30px"}}/></div>
+                            <div><PersonIcon style={{fontSize:"30px"}}/></div>
                             <input ref={name} id="name" type="text" placeholder={user.name}/>
                         </div>
                         <div className="formElement ">
-                            <div><EmailIcon style={{fontSize:"30px"}} /></div>
+                            <div><EmailIcon style={{fontSize:"30px", color:"red"}} /></div>
                             <input  ref={email} id="email" type="text" value={user.email} readOnly></input>
                         </div>
 
