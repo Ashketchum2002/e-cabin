@@ -4,7 +4,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import { useState, useEffect } from "react";
 import { useRef } from "react";
 import axios from "axios"
-import noAvatar from "../../../public/images/icons/noAvatar.jpeg"
+import noAvatar from "./noAvatar.jpeg"
 
 export default function AdminSidebar(props) {
 
