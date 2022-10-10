@@ -24,29 +24,26 @@ export default function AdminEmployee(props) {
     const [data2, setData2] = useState(null);
 
     const fetchData = async () => {
-        var result = await axios.get("/api/employees/" + props.employee._id)
-        result = result.data
-        console.log("Result",result);
-        console.log("hi")
+        var result = await axios.post("/api/employees/weeklyStats", {_id: props.employee._id})
       
-        setEmpData(result)
+        setEmpData(result.data)
 
         setStackedBarData({
             labels,
             datasets: [
               {
                 label: 'Work',
-                data: result.map(ele => {return ele[0]}),
+                data: result.data.map(ele => {return ele[0]}),
                 backgroundColor: 'rgb(255, 99, 132)',
               },
               {
                 label: 'Meet',
-                data: result.map(ele => {return ele[1]}),
+                data: result.data.map(ele => {return ele[1]}),
                 backgroundColor: 'rgb(75, 192, 192)',
               },
               {
                 label: 'Break',
-                data: result.map(ele => {return ele[2]}),
+                data: result.data.map(ele => {return ele[2]}),
                 backgroundColor: 'rgb(53, 162, 235)',
               },
             ],
@@ -57,7 +54,7 @@ export default function AdminEmployee(props) {
             datasets: [
               {
                 label: 'Work day spent in minutes',
-                data: result[0],
+                data: result.data[0],
                 backgroundColor: [
                   '#ff6666',
                   '#ffe338',
@@ -78,7 +75,7 @@ export default function AdminEmployee(props) {
             datasets: [
               {
                 label: 'Work day spent in minutes',
-                data: result[1],
+                data: result.data[1],
                 backgroundColor: [
                   '#ff6666',
                   '#ffe338',

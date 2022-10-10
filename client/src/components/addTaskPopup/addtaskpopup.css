@@ -91,3 +91,8 @@
     transform: translateY(3px);
 }
 
+@media only screen and (min-width:200px) and (max-width: 1200px) {
+    .popupOuter {
+        top: 50%
+    }
+}

@@ -140,9 +140,9 @@ router.post("/addEmployee", async (req, res) => {
 })
 
 
-router.get("/:id", async (req,res)=>{
+router.post("/weeklyStats", async (req,res)=>{
     try{
-        const tasksMeta = await Task.find({employeeId:req.params.id});
+        const tasksMeta = await Task.find({employeeId:req.body._id});
         const tasks = [];
         tasksMeta.forEach(function (tsk){
             const t = {
@@ -153,7 +153,7 @@ router.get("/:id", async (req,res)=>{
             }
             tasks.push(t);
         });
-        let weekDayStats = await getEmpStats(req.params.id);
+        let weekDayStats = await getEmpStats(req.body._id);
         res.status(200).json(weekDayStats);
     }catch(e){
         console.log(e);
