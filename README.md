@@ -2,6 +2,8 @@
 
 Problem Statement -> Build a web application where employers can keep a check on their employees' work done every particular day.
 
+## The webite is responive. Responsive images at the end of readme. You can also check it out on a mobile.
+
 ## Login
 
 The design of the login page was was recreated by us taking inspiration from the sign-in page of Amazon. Both employees and admins can login thourgh 
@@ -81,3 +83,31 @@ The employee's personal info, pie charts and stacked bar chart will be updated o
 
 The red icons indicate that the employee cannot edit those fields
 <img width="1440" alt="Screenshot 2022-10-10 at 11 31 06" src="https://user-images.githubusercontent.com/75008644/194808049-06bb3525-264d-4f08-8992-81823785328e.png">
+
+## Responsive Images
+
+<img width="1440" alt="Screenshot 2022-10-10 at 12 02 50" src="https://user-images.githubusercontent.com/75008644/194809507-8d7709f6-36ec-44f7-b47e-55b7c176ba49.png">
+
+<img width="1440" alt="Screenshot 2022-10-10 at 12 03 08" src="https://user-images.githubusercontent.com/75008644/194809513-53067112-2055-44f6-b973-7c8d745bcb21.png">
+
+<img width="1440" alt="Screenshot 2022-10-10 at 12 03 28" src="https://user-images.githubusercontent.com/75008644/194809528-3861fee4-6a40-4d72-8db4-37ae4c5d24e8.png">
+
+<img width="1440" alt="Screenshot 2022-10-10 at 12 04 05" src="https://user-images.githubusercontent.com/75008644/194809591-5288262a-2104-45b6-b6d8-17796faadb3f.png">
+
+<img width="1440" alt="Screenshot 2022-10-10 at 12 03 30" src="https://user-images.githubusercontent.com/75008644/194809540-764d3fb4-cce6-4556-83dc-d1dced27f418.png">
+
+<img width="1440" alt="Screenshot 2022-10-10 at 12 03 38" src="https://user-images.githubusercontent.com/75008644/194809552-af21b344-0ac0-4c20-9d3e-4f0fb4ad907f.png">
+
+<img width="1440" alt="Screenshot 2022-10-10 at 12 03 57" src="https://user-images.githubusercontent.com/75008644/194809564-25498311-f7dd-43fc-893f-942ee2cccba1.png">
+
+<img width="1440" alt="Screenshot 2022-10-10 at 12 03 59" src="https://user-images.githubusercontent.com/75008644/194809574-3bbecd53-fddf-40fc-889e-caaa0ab1d891.png">
+
+<img width="1440" alt="Screenshot 2022-10-10 at 12 06 12" src="https://user-images.githubusercontent.com/75008644/194809793-3a34b6fd-c190-4965-8789-3496bead365a.png">
+
+<img width="1440" alt="Screenshot 2022-10-10 at 12 06 19" src="https://user-images.githubusercontent.com/75008644/194809807-0467c87c-d219-4605-98e1-c7236d8c9ec0.png">
+
+<img width="1440" alt="Screenshot 2022-10-10 at 12 06 31" src="https://user-images.githubusercontent.com/75008644/194809814-db2a0a69-aa6f-4693-becf-c85b199470dd.png">
+
+<img width="1440" alt="Screenshot 2022-10-10 at 12 06 37" src="https://user-images.githubusercontent.com/75008644/194809818-34c4eb2c-3e26-472e-baa3-4315dc369d48.png">
+
+
