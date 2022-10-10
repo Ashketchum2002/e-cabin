@@ -32,6 +32,9 @@ on their names.
 #### How to use the searchbar? 
 Enter a string in the search bar and then click on the search icon. The employees' list will be filtered. If the admin want the entire list back, then he 
 has to clear the search bar and click on the search icon
+
+# The below images show the working of the search bar
+
 <img width="1440" alt="Screenshot 2022-10-10 at 11 34 42" src="https://user-images.githubusercontent.com/75008644/194807836-4167ab35-977c-49fe-be9d-4bfcb17a6b58.png">
 <img width="1440" alt="Screenshot 2022-10-10 at 11 34 48" src="https://user-images.githubusercontent.com/75008644/194807843-df865569-eaab-49d0-86bc-fecb5887a2c9.png">
 
