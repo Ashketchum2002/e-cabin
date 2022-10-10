@@ -57,3 +57,11 @@
     font-size: large;
     padding: 5px;
 }
+
+@media only screen and (min-width:200px) and (max-width: 800px) {
+    .sidebarWrapper {
+        width: 98%;
+        max-width: 100%;
+        min-height: 50vh;
+    }
+}

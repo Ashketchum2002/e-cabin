@@ -22,7 +22,7 @@ export default function AdminSidebar(props) {
     }
 
     useEffect(() => {
-        console.log(props.employees);
+        // console.log(props.employees);
         setAllEmployees(props.employees)
         fetchEmployees();
     }, [])
@@ -55,7 +55,7 @@ export default function AdminSidebar(props) {
                 {employees ? (employees.map((emp) => {
                     return (
                         <div className="sidebarLink" id={emp._id} onClick={props.handleSelect}>
-                            <div id={emp._id} onClick={props.handleSelect}><img id={emp._id} onClick={props.handleSelect} style={{width: "30px", borderRadius: "50%"}} src="https://t4.ftcdn.net/jpg/03/40/12/49/360_F_340124934_bz3pQTLrdFpH92ekknuaTHy8JuXgG7fi.jpg"></img></div>
+                            <div id={emp._id} onClick={props.handleSelect}><img id={emp._id} onClick={props.handleSelect} style={{width: "30px", borderRadius: "50%"}} src="noAvatar.png"></img></div>
                             <div id={emp._id} onClick={props.handleSelect} className="sidebarEmployeeName">{emp.name}</div>
                         </div>
                     )
