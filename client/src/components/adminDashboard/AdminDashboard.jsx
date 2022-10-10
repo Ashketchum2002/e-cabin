@@ -25,6 +25,8 @@ export default function AdminDashBoard() {
         var result = await axios.get("/api/employees/");
         
         setAllEmployees(result.data)
+
+        alert("Fetched")
         
         var cur = JSON.parse(localStorage.getItem("employee"))
         if (cur) {
