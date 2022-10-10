@@ -18,7 +18,7 @@ export default function AdminSidebar(props) {
         var result = await axios.post("/api/employees/");
         setAllEmployees(result.data)
         setEmployees(result.data)
-        console.log(result.data);
+        // console.log(result.data);
     }
 
     useEffect(() => {
@@ -52,7 +52,7 @@ export default function AdminSidebar(props) {
                     <SearchIcon style={{color: "white", fontSize: "30px"}} />
                     <input ref={search} type="text"></input>
                 </div>
-                {props.employees ? (props.employees.map((emp) => {
+                {employees ? (employees((emp) => {
                     return (
                         <div className="sidebarLink" id={emp._id} onClick={props.handleSelect}>
                             <div id={emp._id} onClick={props.handleSelect}><img id={emp._id} onClick={props.handleSelect} style={{width: "30px", borderRadius: "50%"}} src="https://t4.ftcdn.net/jpg/03/40/12/49/360_F_340124934_bz3pQTLrdFpH92ekknuaTHy8JuXgG7fi.jpg"></img></div>
