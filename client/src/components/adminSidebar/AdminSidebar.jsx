@@ -1,5 +1,4 @@
 import "./adminsidebar.css"
-// import employees from "../adminEmployee/test"
 import SearchIcon from '@mui/icons-material/Search';
 import { useState, useEffect } from "react";
 import { useRef } from "react";
@@ -10,10 +9,10 @@ export default function AdminSidebar(props) {
 
     const search = useRef()
 
-    const [employees, setEmployees] = useState(null)
+    const [employees, setEmployees] = useState([])
     const [change, setChange] = useState(0)
 
-    const [allEmployees, setAllEmployees] = useState(null)
+    const [allEmployees, setAllEmployees] = useState([])
 
     const fetchEmployees = async () => {
         var result = await axios.get("/api/employees/");
