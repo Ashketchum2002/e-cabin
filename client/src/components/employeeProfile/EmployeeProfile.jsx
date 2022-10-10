@@ -53,7 +53,7 @@ export default function EmployeeProfile(props) {
                             <br/>
                         </div>
                         <div className="formElement readOnly">
-                            <div><PersonIcon style={{fontSize:"30px"}}/></div>
+                            <div><PersonIcon style={{fontSize:"30px", color: "black"}}/></div>
                             <input ref={name} id="name" type="text" placeholder={user.name}/>
                         </div>
                         <div className="formElement ">

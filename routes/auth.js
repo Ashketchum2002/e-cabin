@@ -88,10 +88,10 @@ router.post("/editProfile", async (req, res) => {
             return
         }
 
-        user.name = req.body.name
-        user.phoneNumber = req.body.phoneNumber
+        // user.name = req.body.name
+        // user.phoneNumber = req.body.phoneNumber
 
-        await user.save();
+        await user.updateOne({name: req.body.name, phoneNumber: req.body.phoneNumber});
         
         res.send("Saved")
 
