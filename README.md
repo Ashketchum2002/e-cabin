@@ -6,11 +6,11 @@ Problem Statement -> Build a web application where employers can keep a check on
 
 ## The webite is responive. Responsive images at the end of readme. You can also check it out on a mobile.
 
-# Test Admin cerdentials
+# Test Admin credentials
 email - ashKetchum@gmail.com
 password - 99221
 
-# Test Employee cerdentials
+# Test Employee credentials
 email - ashishoct2002.ketchum@gmail.com
 password - 89197
 
