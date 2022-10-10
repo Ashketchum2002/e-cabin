@@ -4,6 +4,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import { useState, useEffect } from "react";
 import { useRef } from "react";
 import axios from "axios"
+import noAvatar from "../../../public/images/icons/noAvatar.jpeg"
 
 export default function AdminSidebar(props) {
 
@@ -55,7 +56,7 @@ export default function AdminSidebar(props) {
                 {employees ? (employees.map((emp) => {
                     return (
                         <div className="sidebarLink" id={emp._id} onClick={props.handleSelect}>
-                            <div id={emp._id} onClick={props.handleSelect}><img id={emp._id} onClick={props.handleSelect} style={{width: "30px", borderRadius: "50%"}} src="noAvatar.png"></img></div>
+                            <div id={emp._id} onClick={props.handleSelect}><img id={emp._id} onClick={props.handleSelect} style={{width: "30px", borderRadius: "50%"}} src={noAvatar}></img></div>
                             <div id={emp._id} onClick={props.handleSelect} className="sidebarEmployeeName">{emp.name}</div>
                         </div>
                     )
