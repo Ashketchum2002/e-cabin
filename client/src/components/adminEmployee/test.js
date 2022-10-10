@@ -1,4 +1,4 @@
-const employees = [
+export const employees = [
       {
           id: 1,
           name: "Chevva Ashish Reddy",
@@ -154,5 +154,3 @@ export const tasks = [
     taskDesc: "Meeting with the client"
   }
 ]
-
-export default employees;
