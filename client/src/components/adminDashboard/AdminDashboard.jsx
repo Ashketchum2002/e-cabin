@@ -13,7 +13,7 @@ export default function AdminDashBoard() {
 
     const [employee, setEmployee] = useState(null);
 
-    const [allEmployees, setAllEmployees] = useState(null);
+    const [allEmployees, setAllEmployees] = useState([]);
 
     const [change, setChange] = useState(0);
 
