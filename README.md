@@ -4,6 +4,16 @@ Problem Statement -> Build a web application where employers can keep a check on
 
 ## The webite is responive. Responsive images at the end of readme. You can also check it out on a mobile.
 
+# Test Admin cerdentials
+email - ashKetchum@gmail.com
+password - 99221
+
+# Test Employee cerdentials
+email - ashishoct2002.ketchum@gmail.com
+password - 89197
+
+# As the website is live, you will have to add tasks to see the charts, as we have added tasks only for dates 10th October or less.
+
 ## Login
 
 The design of the login page was was recreated by us taking inspiration from the sign-in page of Amazon. Both employees and admins can login thourgh 
@@ -11,8 +21,13 @@ this page. We added an isAdmin boolean variable in the database for each employe
 After entering the email, click on Continue button, then enter the password and click on sign-in. If the user is admin you will redirected to the
 admin dashboard, else employee dashboard.
 
+The password is hashed using bcrypt, when the user tries to login, the entered password and stored password are compared.
+
 If you want to change the email that you entered, click on Change link.
 <img width="1440" alt="Screenshot 2022-10-10 at 11 31 36" src="https://user-images.githubusercontent.com/75008644/194806837-4677579a-9129-4095-86f5-9115c33582f6.png">
+
+If no tasks of the employee are found.....
+<img width="1440" alt="Screenshot 2022-10-10 at 12 09 17" src="https://user-images.githubusercontent.com/75008644/194810135-8083770d-a980-40c7-9c83-7c33a5cedf5d.png">
 
 ## Admin Dashboard
 <img width="1440" alt="Screenshot 2022-10-10 at 11 33 49" src="https://user-images.githubusercontent.com/75008644/194807768-78ab4bc8-a5b9-4449-be05-106867a9ba97.png">
