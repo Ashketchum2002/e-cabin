@@ -55,11 +55,11 @@ export default function EmployeeProfile(props) {
                         </div>
                         <div className="formElement readOnly">
                             <div><LockPersonIcon style={{fontSize:"30px"}}/></div>
-                            <input ref={name} id="name" type="text" value={user.name} readOnly/>
+                            <input ref={name} id="name" type="text" placeholder={user.name}/>
                         </div>
                         <div className="formElement ">
                             <div><EmailIcon style={{fontSize:"30px"}} /></div>
-                            <input  ref={email} id="email" type="text" placeholder={user.email}></input>
+                            <input  ref={email} id="email" type="text" value={user.email} readOnly></input>
                         </div>
 
                         <div className="formElement">

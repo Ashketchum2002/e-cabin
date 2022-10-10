@@ -132,7 +132,7 @@
     flex-direction: row;
     width: 100%;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 20px;
     font-family:Georgia, 'Times New Roman', Times, serif;
     background-color: white;
