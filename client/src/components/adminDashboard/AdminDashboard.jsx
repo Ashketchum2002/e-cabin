@@ -23,17 +23,15 @@ export default function AdminDashBoard() {
 
     const fetchEmployees = async () => {
         var result = await axios.get("/api/employees/");
-        result = result.data;
-        // console.log(result);
         
-        setAllEmployees(result)
+        setAllEmployees(result.data)
         
         var cur = JSON.parse(localStorage.getItem("employee"))
         if (cur) {
             setEmployee(cur)
         }
         else {
-            setEmployee(result[0])
+            setEmployee(result.data[0])
         }
     }
 
