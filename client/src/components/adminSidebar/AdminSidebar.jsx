@@ -19,6 +19,7 @@ export default function AdminSidebar(props) {
         var result = await axios.get("/api/employees/");
         setAllEmployees(result.data)
         setEmployees(result.data)
+        console.log(result.data);
     }
 
     useEffect(() => {
