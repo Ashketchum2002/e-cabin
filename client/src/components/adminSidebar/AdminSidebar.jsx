@@ -15,43 +15,44 @@ export default function AdminSidebar(props) {
 
     const [allEmployees, setAllEmployees] = useState([])
 
-    const fetchEmployees = async () => {
-        var result = await axios.get("/api/employees/");
-        setAllEmployees(result.data)
-        setEmployees(result.data)
-        console.log(result.data);
-    }
+    // const fetchEmployees = async () => {
+    //     var result = await axios.get("/api/employees/");
+    //     setAllEmployees(result.data)
+    //     setEmployees(result.data)
+    //     console.log(result.data);
+    // }
 
     useEffect(() => {
-        fetchEmployees();
+        setAllEmployees(props.employees)
+        // fetchEmployees();
     }, [])
 
-    const handleSearch = () => {
-        if (search.current.value == "") {
-            setEmployees(allEmployees)
-            // setChange(!change)
-            return;
-        }
-        var newList = []
-        for (var i = 0; i < allEmployees.length; i++) {
-            if (allEmployees[i].name.toLowerCase().includes(search.current.value.toLowerCase())) {
-                newList.push(allEmployees[i])
-            }
-        }
-        if (newList.length != 0) {
-            setEmployees(newList)
-            // setChange(!change)
-        }
-    }
+    // const handleSearch = () => {
+    //     if (search.current.value == "") {
+    //         setEmployees(allEmployees)
+    //         // setChange(!change)
+    //         return;
+    //     }
+    //     var newList = []
+    //     for (var i = 0; i < allEmployees.length; i++) {
+    //         if (allEmployees[i].name.toLowerCase().includes(search.current.value.toLowerCase())) {
+    //             newList.push(allEmployees[i])
+    //         }
+    //     }
+    //     if (newList.length != 0) {
+    //         setEmployees(newList)
+    //         // setChange(!change)
+    //     }
+    // }
 
     return (
         <>
             <div className="sidebarWrapper">
                 <div className="sidebarSearch">
-                    <SearchIcon onClick={handleSearch} style={{color: "white", fontSize: "30px"}} />
+                    <SearchIcon style={{color: "white", fontSize: "30px"}} />
                     <input ref={search} type="text"></input>
                 </div>
-                {employees && employees.length != 0 ? employees.map((emp) => {
+                {allEmployees.length != 0 ? allEmployees.map((emp) => {
                     return (
                         <div className="sidebarLink" id={emp._id} onClick={props.handleSelect}>
                             <div id={emp._id} onClick={props.handleSelect}><img id={emp._id} onClick={props.handleSelect} style={{width: "30px", borderRadius: "50%"}} src="https://t4.ftcdn.net/jpg/03/40/12/49/360_F_340124934_bz3pQTLrdFpH92ekknuaTHy8JuXgG7fi.jpg"></img></div>
